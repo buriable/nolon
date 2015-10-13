@@ -1,0 +1,251 @@
+<!doctype html>
+<html class="fsvs" lang="en">
+<head>
+
+        <meta name="viewport" content="width=device-width">
+    
+        <link href='http://fonts.googleapis.com/css?family=Exo+2:100,200,300' rel='stylesheet' type='text/css'>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    
+        <link href="assets/css/style.css" media="all" rel="stylesheet" type="text/css" />
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="assets/js/bundle.js"></script>
+        <script>
+        jQuery(document).ready(function($){
+            var slider = $.fn.fsvs({
+                speed               : 1000,
+                bodyID              : 'fsvs-body',
+                selector            : '> .slide',
+                mouseSwipeDisance   : 40,
+                afterSlide          : function(){},
+                beforeSlide         : function(){},
+                endSlide            : function(){},
+                mouseWheelEvents    : true,
+                mouseWheelDelay     : false,
+                mouseDragEvents     : true,
+                touchEvents         : true,
+                arrowKeyEvents      : true,
+                pagination          : true,
+                nthClasses          : 2,
+                detectHash          : true
+            });
+        });
+        </script>
+        
+<style>
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+.slide { 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+	width: 100%;
+	height: 100%;  
+}
+
+.slide:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#one{background: url(img/bg-1.jpg) no-repeat center center;}
+#one:before {background-image: linear-gradient(to bottom right, #002f4b, #dc4225); opacity: .1;}
+#one i{
+	position: relative;
+	color: #FFF;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#one h1{
+	position:relative;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 200;
+	font-size: 3.5em;
+	color: #FFF;
+	text-align: right;
+	padding-top: 10%;
+	padding-right: 15%;
+	padding-left: 15%;
+}
+#one p{
+	position:relative;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 300;
+	font-size: 1.5em;
+	color: #FFF;
+	text-align: right;
+	padding-left: 15%;
+	padding-right: 15%;
+	max-width:75%;
+	float:right;
+}
+
+#two{background: url(img/bg-2.jpg) no-repeat center center;}
+#two:before {background-image: linear-gradient(to bottom right, #000, #000); opacity: .2;}
+#two i{
+	position:relative;
+	color: #FFF;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;
+	
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#two h1{
+	position:relative;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 200;
+	font-size: 3.5em;
+	color: #FFF;
+	text-align: left;
+	padding-top: 5%;
+	padding-right: 15%;
+	padding-left: 15%;
+}
+#two p{
+	position:relative;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 300;
+	font-size: 1.5em;
+	color: #FFF;
+	text-align: justify;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+#three{background: url(img/bg-3.jpg) no-repeat center center;}
+#three:before {background-image: linear-gradient(to bottom right, #000, #000); opacity: .1;}
+#three i{
+	position:relative;
+	color: #FFF;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;
+	
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#three h1{
+	position: relative;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 200;
+	font-size: 3.5em;
+	color: #FFF;
+	text-align: center;
+	padding-right: 15%;
+	padding-left: 15%;
+}
+#three p{
+	position: relative;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 300;
+	font-size: 1.5em;
+	color: #FFF;
+	text-align: center;
+}
+#three a{
+	color: #ffb7b7;
+	text-decoration: none;
+}
+#three a:hover{}
+
+/* This parent can be any width and height */
+.block {
+	text-align: center;
+	/* May want to do this if there is risk the container may be narrower than the element inside */
+	/* white-space: nowrap; */
+}
+ 
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can also be of any width and height */ 
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  
+  max-width: 60%;
+}
+
+.copy{
+	z-index: 9999;
+	position: absolute;
+	padding: 2.5%;
+}
+.copy i{
+	color: #FFF;
+}
+
+@media screen and (max-width:599px) {
+	body {
+    -webkit-text-size-adjust: 100%;
+}
+#one h1, #one p, #three h1, #three p{text-align: center;padding-left: 10%;padding-right: 10%;max-width:100%;}
+.centered {  
+  max-width: 90%;
+}
+.copy{padding: 5%;}
+</style>        
+        
+<title>Nolon</title>
+</head>
+    <body><div class="copy"><a href="#"><i class="fa fa-connectdevelop fa-3x"></i></a></div>
+        <div id="fsvs-body">
+        
+            <div class="slide" id="one">
+             <h1><i class="fa fa-diamond"></i><br>Perspective</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula porttitor faucibus. Proin lobortis at diam quis varius.</p>
+            </div>
+
+            <div class="slide" id="two">
+             <h1>Enhance</h1>
+              <p><i class="fa fa-apple fa-3x pull-left"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula porttitor faucibus. Proin lobortis at diam quis varius. Nulla venenatis ante ac quam ornare, et congue purus suscipit. Curabitur sed porta nibh, ut varius sem. Mauris sodales, lacus vitae gravida pulvinar, dui augue faucibus velit, ornare dictum odio massa in quam. Donec condimentum orci id nisl consequat cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean at tortor metus. Mauris ultrices metus vel enim gravida, ut luctus velit egestas. Vestibulum quis erat eget nulla iaculis ultrices eu ut nunc. Suspendisse id nisi porta, congue quam at, rhoncus nulla. Donec bibendum pharetra congue. Proin vitae augue pulvinar ipsum hendrerit pretium id eu magna. Vivamus rhoncus hendrerit eros vitae lacinia.</p>
+            </div>
+            
+            <div class="slide" id="three">
+            
+             <div class="block" style="height: 100%;">
+              <div class="centered">
+               <i class="fa fa-twitter fa-3x fa-border"></i>
+                <h1>Engage</h1>
+                 <p><i class="fa fa-twitter"></i> "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula porttitor faucibus. Proin lobortis at diam quis varius." &mdash; <a href="#">Charlie</a></p>
+              </div>
+             </div>
+
+            </div>            
+
+        </div>
+    </body>
+</html>
